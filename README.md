@@ -28,7 +28,10 @@ Results are shown in a side panel with a colored BAC meter, a symptoms list, and
 git clone <your-repo-url>
 cd beer-o-meter
 npm install
+npm run compile
 ```
+
+The `compile` step produces `out/extension.js`, which `package.json` points to as the extension entry point. Without it, VS Code can't load the extension and the **Beer-O-Meter: Analyze this code** command won't appear in the command palette. Use `npm run watch` to rebuild on save.
 
 Then open the folder in VS Code and press **F5** to launch an Extension Development Host with Beer-O-Meter loaded.
 
